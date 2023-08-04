@@ -1,10 +1,6 @@
-    <!DOCTYPE html>
-    <head>
-        <title>ArtDr12's homepage</title>
-    </head>
-    <body>
-        <h3>Welcome!</h3>
-        <h3></h3>
-        <h4>My projects:</h4>
-        <h4><a href="https://artdr12.github.io/gdlist/">Geometry Dash Demon List</a></h4>
-    </html>
+![image](https://github.com/ArtDr12/artdr12.github.io/assets/141354887/7d98caa9-7462-47bf-a04a-e90918901668)Welcome!
+
+
+My projects:
+
+[Geometry Dash Demonlist](https://artdr12.github.io/gdlist)
