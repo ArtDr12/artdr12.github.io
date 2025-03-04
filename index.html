@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://api-maps.yandex.ru/2.1.38/?lang=ru_RU&apikey=db536b3d-21e2-497f-a9a6-b297aeadaf69" type="text/javascript"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>GeoGuessr по городам России</title>
+</head>
+<body>
+    <h1>GeoGuessr по городам России</h1>
+    <div class="container">
+        <div class="map-panorama-container">
+            <div id="panorama"></div>
+            <div id="map"></div>
+        </div>
+        <button id="guessButton" onclick="handleButtonClick()">Проверить</button>
+        <p>Баллы: <span id="score">0</span></p>
+        <p>Дистанция до объекта: <span id="distance">0</span> км</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
