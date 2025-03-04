@@ -5,7 +5,7 @@ var places = [
     { name: "Храм Василия Блаженного", coords: [55.752555, 37.623023] },
     { name: "Парк Зарядье", coords: [55.751403, 37.628826] },
     { name: "ВДНХ, фонтан «Дружба народов»", coords: [55.829577, 37.630968] },
-    { name: "Останкинская телебашня", coords: [55.819645, 37.611627] },
+    { name: "Останкинская башня", coords: [55.818182, 37.610269] },
     { name: "Дворцовая площадь", coords: [59.938644, 30.315785] },
     { name: "Исаакиевский собор", coords: [59.934192, 30.306004] },
     { name: "Петергоф, Большой каскад", coords: [59.883738, 29.907562] },
@@ -16,10 +16,9 @@ var places = [
     { name: "Ростовский кремль", coords: [57.184598, 39.414938] },
     { name: "Успенский собор, Владимир", coords: [56.127222, 40.408611] },
     { name: "Троице-Сергиева лавра", coords: [56.310223, 38.130004] },
-    { name: "Куршская коса, Танцующий лес", coords: [55.200111, 20.859672] },
-    { name: "Ленские столбы, Якутия", coords: [61.104240, 127.330030] },
-    { name: "Красноярские столбы, заповедник", coords: [55.895278, 92.798056] },
-    { name: "Приэльбрусье, станция «Мир»", coords: [43.349286, 42.437923] },
+    { name: "Монумент дружбы народов, Ижевск", coords: [56.852070, 53.197368] },
+    { name: "Красноярские столбы, заповедник", coords: [55.917503, 92.744973] },
+    { name: "Эльбрус", coords: [43.265576, 42.477846] },
     { name: "Озеро Байкал, Листвянка", coords: [51.851003, 104.869627] },
     { name: "Ласточкино гнездо", coords: [44.430833, 34.128333] },
     { name: "Воронцовский дворец, Алупка", coords: [44.419853, 34.055722] },
@@ -32,7 +31,7 @@ var places = [
     { name: "Музей «Гранд Макет Россия», СПб", coords: [59.928742, 30.318257] },
     { name: "Новосибирский театр оперы и балета", coords: [55.030278, 82.920278] },
     { name: "Владивосток, Золотой мост", coords: [43.113056, 131.899444] },
-    { name: "Хабаровск, утёс Амурский", coords: [48.744444, 135.071111] },
+    { name: "Парк имени Кирова, Ижевск", coords: [56.865223, 53.166425] },
     { name: "Мамаев курган, Родина-мать", coords: [48.742275, 44.537115] },
     { name: "Музей-диорама «Курская дуга»", coords: [51.711659, 36.185265] },
     { name: "Памятник «Алеша», Мурманск", coords: [68.993611, 33.075833] },
@@ -54,6 +53,7 @@ var correctMarker;
 var map;
 var player;
 var availablePlaces = [...places];
+let rounds = 0;
 
 function randomPanorama() {
     if (availablePlaces.length === 0) {
@@ -88,6 +88,7 @@ function init() {
 function startNewRound() {
     randomPlace = randomPanorama();
     if (player) player.destroy();
+    rounds += 1;
 
     ymaps.panorama.locate(randomPlace.coords).done(
         function (panoramas) {
@@ -109,6 +110,7 @@ function startNewRound() {
 
     document.getElementById('guessButton').textContent = 'Проверить';
     document.getElementById('guessButton').onclick = handleButtonClick;
+    document.getElementById('round').textContent = rounds;
 }
 
 function handleButtonClick() {

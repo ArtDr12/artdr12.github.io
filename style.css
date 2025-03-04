@@ -67,7 +67,7 @@ body {
     transform: scale(0.95);
 }
 
-#score, #distance {
+#score, #distance #rounds {
     color: #00ffcc;
     font-size: 24px;
     font-weight: bold;
