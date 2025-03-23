@@ -1,0 +1,50 @@
+* {
+  font-family: 'Cantarell';
+  color: #ffffff;
+  text-align: center;
+  align-items: center;
+}
+
+body {
+  background-color: #502800;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+img {
+  margin: 0 auto;
+  border: 10px solid #a05000;
+  margin-bottom: 40px;
+}
+
+h1, h2, a, .terminal {
+  color: #ff8000;
+}
+
+h1 {
+  font-size: 80px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 40px;
+  margin-top: 0;
+}
+
+p {
+  font-size: 24px;
+  word-wrap: break-word;
+  max-width: 500px;
+  margin-top: 0;
+}
+
+.horizontal {
+  display: flex;
+  gap: 50px;
+}
